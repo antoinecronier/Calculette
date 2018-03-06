@@ -11,7 +11,7 @@ abstract public class MotherInput {
 		switch (operator) {
 		
 		case 1: 
-			
+			Fonction.addition(val1, val2);
 		break;
 		
 		
