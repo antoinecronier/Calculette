@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Vue extends JFrame {
+	private JLabel output = new JLabel("0");
+	
     public Vue(){
         int width = 400;
         int height = 350;
@@ -35,7 +37,7 @@ public class Vue extends JFrame {
         constraints.gridy = 0;
         constraints.gridwidth = 5;
 
-        JLabel output = new JLabel("0");
+        
         output.setFont(new Font("Arial", Font.BOLD, 22));
         output.setForeground(accent);
         resultPanel.add(output, constraints);
@@ -211,4 +213,17 @@ public class Vue extends JFrame {
 
         return returnedOne;
     }
+    
+    // Set result
+    public void setResult(int result) {
+    	output.setText(result+"");
+    }
+    // Get calcul
+    public String getResult() {
+    	return output.getText();
+    }
+    
+    
+    
+    
 }
