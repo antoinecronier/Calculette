@@ -8,6 +8,7 @@ import javafx.scene.input.KeyEvent;
 
 
 public class Controller {
+	public ConvertToObject convertor = new ConvertToObject();
     public Label result;
 
     public String defaultStringText = "Start typing";
@@ -297,7 +298,8 @@ public class Controller {
     // Do the maths
     public void calculate(){
         String maths = getOutput();
-        System.out.println(maths);
+        int answer = convertor.calculate(maths);
+        display(Integer.toString(answer));
     }
 
     @FXML
