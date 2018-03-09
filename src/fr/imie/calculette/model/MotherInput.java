@@ -69,7 +69,7 @@ abstract public class MotherInput {
 	}
 
 	public void calc() {
-<<<<<<< HEAD
+
 
 		int operator = 0;
 		switch (operator) {
@@ -163,9 +163,7 @@ abstract public class MotherInput {
 			Fonction.tan();		
 		break;
 		}
-=======
 
->>>>>>> 
 	}
 
 }
