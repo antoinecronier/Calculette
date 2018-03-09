@@ -14,5 +14,5 @@ Scientific Calculator
 
 	- branch 6, Paul : Search the libraries that we need  ; 
 
-	- branch 7, Yannoël : Implement the functions of the libraries that was found by Paul ;
+	- branch 7, Yannoël : Implement the functions of the libraries found by Paul ;
 	
