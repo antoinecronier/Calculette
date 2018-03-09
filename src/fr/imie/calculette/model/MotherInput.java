@@ -70,6 +70,7 @@ abstract public class MotherInput {
 
 	public void calc() {
 <<<<<<< HEAD
+
 		int operator = 0;
 		switch (operator) {
 		
@@ -79,92 +80,92 @@ abstract public class MotherInput {
 		
 		
 		case 2:
-			
+			Fonction.soustraction(val1, val2);
 		break;
 		
 		
 		case 3:
-			
+			Fonction.division(val1, val2);
 		break;
 		
 		
 		case 4:
-			
+			Fonction.multiplication(val1, val2);
 		break;
 		
 		
 		case 5:
-			
+			Fonction.modulo(val1, val2);
 		break;
 		
 		
 		case 6: 
-			
+			Fonction.factorielle(val);
 		break;
 			
 			
 		case 7:
-				
+			Fonction.fraction();
 		break;
 			
 			
 		case 8:
-				
+			Fonction.puissance()	
 		break;
 			
 			
 		case 9:
-				
+			Fonction.puissanceDix();	
 		break;
 			
 			
 		case 10:
-				
+			Fonction.cos();	
 		break;
 		
 		
 		case 11: 
-			
+			Fonction.sin();
 		break;
 			
 			
 		case 12:
-				
+			Fonction.log();	
 		break;
 			
 		
 		case 13:
-				
+			Fonction.ln();	
 		break;
 			
 			
 		case 14:
-				
+			Fonction.variableSolver();
 		break;
 			
 			
 		case 15:
-				
+			Fonction.exponentielle();
 		break;
 			
 			
 		case 16: 
-				
+			Fonction.valeurAbsolue();	
 		break;
 				
 				
 		case 17:
-					
+			Fonction.pi();		
 		break;
 				
 				
 		case 18:
-					
+			Fonction.tan();		
 		break;
 		}
 =======
 
->>>>>>> d0f1b75e0d101be11f8526248a0dc67d04e0cfe3
+>>>>>>> 
 	}
 
 }
