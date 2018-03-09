@@ -102,11 +102,11 @@ public class Fonction {
 		return fin;
 	}
 	
-	public static double variableSolver(double val1, double val2) { //18
-		double fin = 0;
-		2 + a = 3;
-		return fin;
-	}
+	//public static double variableSolver(double val1, double val2) { //18
+	//	double fin = 0;
+	//	2 + a = 3;
+	//	return fin;
+	//}
 	
 	public static double exponentielle(double val) { //14
 		double fin = 0;
