@@ -14,35 +14,21 @@ public class Fonction {
 		return fin;
 	}
 	
-	public static double division(double val1, double val2) { //4
-		double fin;
-		fin = val1 / val2;
-		return fin;
-	}
-	
 	public static double multiplication(double val1, double val2) { //3
 		double fin;
 		fin = val1 * val2;
 		return fin;
 	}
 	
+	public static double division(double val1, double val2) { //4
+		double fin;
+		fin = val1 / val2;
+		return fin;
+	}
+	
 	public static double modulo(double val1, double val2) { //5
 		double fin;
 		fin = val1 % val2;
-		return fin;
-	}
-	
-	public static int factorielle(int val) { //9
-		int fin = 1;
-		for(int i = 1; i <= val; i++) {
-			fin *= i;
-		}
-		return fin;
-	}
-	
-	public static double racine(double val) { //7
-		double fin = 0;
-		fin = Math.sqrt(val);
 		return fin;
 	}
 	
@@ -54,8 +40,9 @@ public class Fonction {
 		return fin;
 	}
 	
-	public static double carre(double val) { //23
-		double fin = val*val;
+	public static double racine(double val) { //7
+		double fin = 0;
+		fin = Math.sqrt(val);
 		return fin;
 	}
 	
@@ -73,8 +60,11 @@ public class Fonction {
 		return fin;
 	}
 	
-	public static int negatif(int val) { //24
-		int fin = 1/val;
+	public static int factorielle(int val) { //9
+		int fin = 1;
+		for(int i = 1; i <= val; i++) {
+			fin *= i;
+		}
 		return fin;
 	}
 		
@@ -102,12 +92,6 @@ public class Fonction {
 		return fin;
 	}
 	
-	public static double variableSolver(double val1, double val2) { //18
-		double fin = 0;
-		2 + a = 3;
-		return fin;
-	}
-	
 	public static double exponentielle(double val) { //14
 		double fin = 0;
 		fin = Math.exp(val);
@@ -125,15 +109,15 @@ public class Fonction {
 		return fin;
 	}
 	
-	public static double pi() { //17
-		double fin = Math.PI;
-		return fin;
-	}
-	
 	public static double tan(double val) { //16
 		double tan = val, fin;
 		tan = Math.toRadians(tan);
 		fin = Math.tan(tan);
+		return fin;
+	}
+	
+	public static double pi() { //17
+		double fin = Math.PI;
 		return fin;
 	}
 	
@@ -155,6 +139,16 @@ public class Fonction {
 		double aTan = val, fin;
 		aTan = Math.toRadians(aTan);
 		fin = Math.atan(aTan);
+		return fin;
+	}
+	
+	public static double carre(double val) { //23
+		double fin = val*val;
+		return fin;
+	}
+	
+	public static int negatif(int val) { //24
+		int fin = 1/val;
 		return fin;
 	}
 
