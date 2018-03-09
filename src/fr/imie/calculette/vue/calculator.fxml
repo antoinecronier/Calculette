@@ -217,12 +217,12 @@
                   <Font name="Roboto Light" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="square" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x²" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="square" mnemonicParsing="false" onAction="#addSquare" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x²" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="Roboto Light" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="power" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="xʸ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="power" mnemonicParsing="false" onAction="#addPower" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="xʸ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="Roboto Light" size="18.0" />
                </font>
@@ -232,7 +232,7 @@
                   <Font name="Roboto Light" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="exponential" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="eˣ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="exponential" mnemonicParsing="false" onAction="#addExponential" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="eˣ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Roboto Light" size="18.0" />
                </font>
@@ -247,12 +247,12 @@
                   <Font name="Roboto Light" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="tenpower" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="10ˣ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="3">
+            <Button fx:id="tenpower" mnemonicParsing="false" onAction="#addTen" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="10ˣ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="3">
                <font>
                   <Font name="Roboto Light" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="inverted" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x⁻¹" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="inverted" mnemonicParsing="false" onAction="#addInvertX" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x⁻¹" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="Roboto Light" size="18.0" />
                </font>

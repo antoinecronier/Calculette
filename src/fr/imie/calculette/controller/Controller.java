@@ -14,7 +14,7 @@ public class Controller {
 
     @FXML
     void keyPressed(KeyEvent event) {
-        System.out.println(event.getCode());
+        //System.out.println(event.getCode());
         switch (event.getCode()) {
             case BACK_SPACE:
                 deleteLast();
@@ -89,6 +89,9 @@ public class Controller {
             case DECIMAL:
                 addComa();
                 break;
+            case DEAD_CIRCUMFLEX: 
+            	addPower();
+            	break;
             default:
                 break;
         }
@@ -165,8 +168,9 @@ public class Controller {
         if(func.equals("!")){
             space = "";
         }
-        addPart(func.concat(space));
         if(getLastCharacter().equals("(")){
+            display(getOutput().concat(func.concat(space)));
+        }else {
             addPart(func.concat(space));
         }
     }
@@ -211,6 +215,36 @@ public class Controller {
     public void addAbs(){
         addPart("Abs(");
     }
+    // Enter absolute symbol
+    public void addExponential(){
+        addPart("e^");
+    }
+    // Enter 10 power
+    public void addTen(){
+        addPart("10^");
+    }
+    
+    // Enter x^2
+    public void addSquare() {
+    	System.out.println("Adds square");
+    	addAfterNumbers("^2");
+    }
+    public void addPower() {
+    	addAfterNumbers("^");
+    }
+    
+    // Adds invert value
+    public void addInvertX() {
+        String content = getOutput();
+        String previous = getLastCharacter();
+        if(content.equals(defaultStringText)){
+            display("1/");
+        }else{
+            if(!isValue(previous)){
+            	display(content.concat("1/"));
+            }
+        }
+    }
 
     // Add pi
     public void addPi(){
@@ -219,7 +253,8 @@ public class Controller {
         if(content.equals(defaultStringText)){
             display("π");
         }else{
-            if(isOperator(previous) || isValue(previous)){
+            if(isOperator(previous) || isValue(previous)
+            		|| getLastCharacter().equals("^") || getLastCharacter().equals("(")){
                 if(!previous.equals("π")){
                     display(content.concat("π"));
                 }
@@ -274,14 +309,14 @@ public class Controller {
     @FXML
     public void deleteLast(){
         String[] groupException = {
-                "Sqrt(", "cos ", "sin ", "tan ", "log ", "ln ", "Abs("
+                "Sqrt(", "cos ", "sin ", "tan ", "log ", "ln ", "Abs(", "e^"
         };
         String content = getOutput();
         if(!content.equals(defaultStringText)){
             if(content.length() <= 1){
                 result.setText(defaultStringText);
             }else{
-                if(isValue(getLastCharacter())){
+                if(isValue(getLastCharacter()) || isOperator(getLastCharacter())){
                     removeLastCharacter();
                 }else{
                     int counter, expCursor = 0;
@@ -294,15 +329,23 @@ public class Controller {
                         counter = content.length() - 1;
                         expCursor = exp.length() - 1;
                         do {
-                            expChar = new Character(exp.charAt(expCursor));
-                            contentChar = new Character(content.charAt(counter));
+                        	try {
+                                expChar = new Character(exp.charAt(expCursor));
+                                contentChar = new Character(content.charAt(counter));
+                        	} catch(Exception e) {
+                        		break;
+                        	}
                             counter--;
                             expCursor--;
-                        } while(expChar.equals(contentChar));
+                        } while(expChar.equals(contentChar) && expCursor != 0);
                         if(expCursor == 0){
-                            System.out.println(exp+" has been found :)");
-                            content = content.substring(0, content.length()-1);
-                            display(content);
+                            content = content.substring(0, content.length() - exp.length());
+                            found = true;
+                            if(content.isEmpty()) {
+                            	display(defaultStringText);
+                            }else {
+                                display(content);	
+                            }
                             break;
                         }
                     }
@@ -352,11 +395,18 @@ public class Controller {
     private void addPart(String part){
         String content = getOutput();
         String lastChar = getLastCharacter();
-        if(isOperator(lastChar) || content.equals(defaultStringText)){
+        if(isOperator(lastChar) || content.equals(defaultStringText) || getLastCharacter().equals("^")){
             if(content.equals(defaultStringText)){
                 content = "";
             }
             display(content.concat(part));
         }
+    }
+    // For adding after numbers
+    private void addAfterNumbers(String part) {
+    	String lastChar = getLastCharacter();
+    	if(isValue(lastChar)) {
+    		display(getOutput().concat(part));
+    	}
     }
 }
