@@ -39,8 +39,6 @@ public class Vue extends JFrame {
         output.setFont(new Font("Arial", Font.BOLD, 22));
         output.setForeground(accent);
         resultPanel.add(output, constraints);
-        
-        
 
         // Adds the erase button
         constraints.gridx = 1;
