@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="398.0" prefWidth="570.0" style="-fx-background-color: #f2f2f2;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.imie.calculette.controller.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="90.0" prefWidth="570.0" style="-fx-background-color: #6e0ae1;" GridPane.columnSpan="7" GridPane.rowSpan="2">
+            <children>
+                <Label fx:id="result" layoutX="40.0" layoutY="42.0" text="Start typing" textFill="#eeeeee">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <GridPane prefHeight="216.0" prefWidth="77.0" style="-fx-background-color: #6e0ae1;" GridPane.columnIndex="6" GridPane.rowIndex="2" GridPane.rowSpan="5">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="divide" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="/" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="multiply" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="plus" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="+" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="minus" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="80.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="-" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="equals" mnemonicParsing="false" onAction="#calculate" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="=" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+            <Button fx:id="modulo" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="\%" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Roboto Light" size="24.0" />
+               </font>
+            </Button>
+            </children>
+        </GridPane>
+        <GridPane GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="5">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="seven" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="7" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="eight" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="8" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="nine" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="9" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="five" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="5" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="four" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="4" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="two" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="2" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="one" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="1" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="six" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="6" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="three" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="3" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="zero" mnemonicParsing="false" onAction="#addNumber" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="0" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="invert" mnemonicParsing="false" onAction="#addInvert" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="+/-" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Roboto Light" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="coma" mnemonicParsing="false" onAction="#addComa" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="," textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Roboto Light" size="24.0" />
+                    </font>
+                </Button>
+            <Button fx:id="bracket1" mnemonicParsing="false" onAction="#addOpeningBracket" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="(" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bracket2" mnemonicParsing="false" onAction="#addClosingBracket" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text=")" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="erase" mnemonicParsing="false" onAction="#deleteLast" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="⇐" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="29.0" />
+               </font>
+            </Button>
+            </children>
+        </GridPane>
+      <GridPane style="-fx-background-color: #eee3fa;" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="5">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="cos" mnemonicParsing="false" onAction="#function" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="cos" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="sin" mnemonicParsing="false" onAction="#function" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="sin" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="tan" mnemonicParsing="false" onAction="#function" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="tan" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="pi" mnemonicParsing="false" onAction="#addPi" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="π" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="absolute" mnemonicParsing="false" onAction="#addAbs" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="| |" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="sqrt" mnemonicParsing="false" onAction="#addSqrt" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="√" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="square" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x²" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="power" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="xʸ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ln" mnemonicParsing="false" onAction="#function" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="ln" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="exponential" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="eˣ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="log" mnemonicParsing="false" onAction="#function" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="log" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="factorial" mnemonicParsing="false" onAction="#function" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="!" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="tenpower" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="10ˣ" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="inverted" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="x⁻¹" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="variable" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="VAR" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="assign" mnemonicParsing="false" prefHeight="75.0" prefWidth="82.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="↦" textAlignment="CENTER" textFill="#6e0ae1" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="29.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+    </children>
+</GridPane>
