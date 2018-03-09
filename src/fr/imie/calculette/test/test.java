@@ -1,41 +1,34 @@
 package fr.imie.calculette.test;
 
-import java.lang.*;
-
 public class test {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		
 		// get two double numbers
-		double x = 45.0;
-		double y = 180.0;
+		double cos1 = 90.0;
+		double sin1 = 180.0;
+		double tan1 = 180.0;
 		
-		int angleX = (int) x;
-		int angleY = (int) y;
-		   
+		//stock the printvariable
+		int Cos1 = (int) cos1;
+		int Sin1 = (int) sin1;
+		int Tan1 = (int) tan1;
+		
 		// convert them to radians
-		x = Math.toRadians(x);
-		y = Math.toRadians(y);
-
+		cos1 = Math.toRadians(cos1);
+		sin1 = Math.toRadians(sin1);
+		tan1 = Math.toRadians(tan1);
+		
 		// print their cosine
-		System.out.println("Le Cosinus de (" + angleX + ") = " + Math.cos(x));
-		System.out.println("Le Cosinus de (" + angleY + ") = " + Math.cos(y));
+		System.out.println("Le Cosinus de (" + Cos1 + ") = " + Math.cos(cos1));
+		System.out.println("Le Sinus de (" + Sin1 + ") = " + Math.sin(sin1));
+		System.out.println("La Tangente de (" + Tan1 + ") = " + Math.tan(tan1));
 		
 		
+		double degrees = 90 ;
 		
-		// get two double numbers
-		double x1 = 45.0;
-		double y1 = 180.0;
+		degrees = Math.cos(Math.toRadians(degrees));
+		System.out.println(degrees);
 		
-		int angleX1 = (int) x1;
-		int angleY1 = (int) y1;
-		   
-		// convert them to radians
-		x1 = Math.toRadians(x1);
-		y1 = Math.toRadians(y1);
-
-		// print their sine
-		System.out.println("Le Sinus de (" + angleX1 + ") = " + Math.sin(x1));
-		System.out.println("Le Sinus de (" + angleY1 + ") = " + Math.sin(y1));
 	}
 }
