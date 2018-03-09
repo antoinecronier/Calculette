@@ -219,6 +219,10 @@ public class Vue extends JFrame {
     public void setResult(int result) {
     	output.setText(Integer.toString(result));
     }
+    public void addOutput(String chaine) {
+    	output.setText(output.getText().concat(chaine));
+    }
+    
     // Get calcul
     public String getResult() {
     	return output.getText();

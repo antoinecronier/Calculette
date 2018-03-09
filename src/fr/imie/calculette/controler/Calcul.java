@@ -20,7 +20,7 @@ public class Calcul {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			// TODO Auto-generated method stub
-			
+			maVue.setResult(379009);
 		}
 	}
 }
