@@ -1,4 +1,4 @@
-package fr.imie.calculette.vue;
+package fr.imie.calculette.view;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
