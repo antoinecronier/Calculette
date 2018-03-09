@@ -68,10 +68,10 @@ abstract public class MotherInput {
 		return result;
 	}
 
-	public void calc() {
-<<<<<<< HEAD
+	public void calc(int operator, int val1, int val2) {
+		
 
-		int operator = 0;
+		
 		switch (operator) {
 		
 		case 1: 
@@ -85,12 +85,12 @@ abstract public class MotherInput {
 		
 		
 		case 3:
-			Fonction.division(val1, val2);
+			Fonction.multiplication(val1, val2);
 		break;
 		
 		
 		case 4:
-			Fonction.multiplication(val1, val2);
+			Fonction.division(val1, val2);
 		break;
 		
 		
@@ -100,57 +100,57 @@ abstract public class MotherInput {
 		
 		
 		case 6: 
-			Fonction.factorielle(val);
+			Fonction.puissance(val1,val2);
 		break;
 			
 			
 		case 7:
-			Fonction.fraction();
+			Fonction.racine(val1);
 		break;
 			
 			
 		case 8:
-			Fonction.puissance()	
+			Fonction.puissanceDix(val1);
 		break;
 			
 			
 		case 9:
-			Fonction.puissanceDix();	
+			Fonction.factorielle(val1);	
 		break;
 			
 			
 		case 10:
-			Fonction.cos();	
+			Fonction.cos(val1);	
 		break;
 		
 		
 		case 11: 
-			Fonction.sin();
+			Fonction.sin(val1);
 		break;
 			
 			
 		case 12:
-			Fonction.log();	
+			Fonction.log(val1);	
 		break;
 			
 		
 		case 13:
-			Fonction.ln();	
+			Fonction.ln(val1);	
 		break;
 			
 			
 		case 14:
-			Fonction.variableSolver();
+			Fonction.exponentielle(val1);
 		break;
 			
 			
 		case 15:
-			Fonction.exponentielle();
+			Fonction.valeurAbsolue(val1);
 		break;
 			
 			
 		case 16: 
-			Fonction.valeurAbsolue();	
+			Fonction.tan(val1);
 		break;
 				
 				
@@ -160,12 +160,10 @@ abstract public class MotherInput {
 				
 				
 		case 18:
-			Fonction.tan();		
+			System.out.println("pas normal");
 		break;
 		}
-=======
 
->>>>>>> 
 	}
 
 }
