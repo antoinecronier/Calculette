@@ -2,9 +2,11 @@ package fr.imie.calculette.vue;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class Vue extends JFrame {
 	private JLabel output = new JLabel("0");
+    private JButton equals = button("equal");
 	
     public Vue(){
         int width = 400;
@@ -127,7 +129,6 @@ public class Vue extends JFrame {
         basicMethods.add(bracket2, constraints);
         constraints.gridx = 2;
         constraints.gridwidth = 2;
-        JButton equals = button("equal");
         equals.setBackground(accent);
         basicMethods.add(equals, constraints);
 
@@ -216,11 +217,19 @@ public class Vue extends JFrame {
     
     // Set result
     public void setResult(int result) {
-    	output.setText(result+"");
+    	output.setText(Integer.toString(result));
     }
+    public void addOutput(String chaine) {
+    	output.setText(output.getText().concat(chaine));
+    }
+    
     // Get calcul
     public String getResult() {
     	return output.getText();
+    }
+    
+    public void addCalculationListener(ActionListener listen) {
+    	equals.addActionListener(listen);
     }
     
     
